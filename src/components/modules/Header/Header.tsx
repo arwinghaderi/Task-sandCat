@@ -32,7 +32,7 @@ export default function Header() {
       <div className="relative mx-auto h-6 w-full max-w-[354px] rounded-3xl bg-[url('/images/Bar.png')] bg-no-repeat bg-cover bg-center">
         <div className="absolute inset-0 flex items-center gap-2 px-4">
           {/* Star with number */}
-          <div className="    relative flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 lg:w-[42px] lg:h-[42px] cursor-pointer">
+          <div className="    relative shrink-0 w-8 h-8 sm:w-10 sm:h-10 lg:w-[42px] lg:h-[42px] cursor-pointer">
             <Image
               src="/images/star.png"
               alt="menu"
