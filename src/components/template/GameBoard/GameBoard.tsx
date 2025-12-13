@@ -38,7 +38,7 @@ function DraggableZoneItem({
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3, type: 'spring', stiffness: 300 }}
-      className={`w-full h-full text-black font-normal text-xs lg:text-lg flex items-center justify-center leading-9 rounded-[10px] *:cursor-grab active:cursor-grabbing
+      className={`w-full h-full text-black cursor-grab font-normal text-xs lg:text-lg flex items-center justify-center leading-9 rounded-[9px] *:cursor-grab active:cursor-grabbing
         ${isDragging ? 'opacity-70 shadow-lg' : ''}
         ${
           status === 'default'
@@ -51,7 +51,9 @@ function DraggableZoneItem({
         }
       `}
     >
-      {item.label}
+      <span className=" text-[10px] sm:text-base  lg:text-lg text-black select-none">
+        {item.label}
+      </span>
     </motion.div>
   )
 }
@@ -74,13 +76,13 @@ export default function GameBoard({ zones }: { zones: Zone[] }) {
 
         let zoneClass = ''
         if (!zone.item) {
-          zoneClass = 'bg-white border-[#FC881E] border-dashed md:border-2'
+          zoneClass = 'bg-white border-[#FC881E] border-dashed border-2'
         } else if (zone.status === 'default') {
-          zoneClass = 'bg-[#8561C2]  '
+          zoneClass = 'bg-[#8561C2]  !rounded-xl '
         } else if (zone.status === 'correct') {
-          zoneClass = 'bg-[#00C247]  !rounded-lg'
+          zoneClass = 'bg-[#00C247]  !rounded-xl'
         } else if (zone.status === 'wrong') {
-          zoneClass = 'bg-[#EB5E40]  !rounded-lg'
+          zoneClass = 'bg-[#EB5E40]  !rounded-xl'
         }
 
         return (
@@ -91,14 +93,16 @@ export default function GameBoard({ zones }: { zones: Zone[] }) {
             style={{
               top: zone.top,
               left: zone.left,
-              width: 'clamp(15px, 12%, 92px)',
-              height: 'clamp(13px, 10%, 90px)',
+              width: 'clamp(35px, 15%, 92px)',
+              height: 'clamp(35px, 13%, 90px)',
             }}
           >
             {zone.item ? (
               <DraggableZoneItem item={zone.item} status={zone.status} />
             ) : (
-              <span className=" text-lg text-black select-none">?</span>
+              <span className=" text-[10px] sm:text-base  lg:text-lg text-black select-none">
+                ?
+              </span>
             )}
           </div>
         )

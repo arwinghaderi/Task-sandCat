@@ -7,12 +7,13 @@ export default function Header() {
       <div className=" relative mx-auto   md:w-[600px]  h-[170px] rounded-3xl bg-[url('/images/Header-bg.png')] bg-no-repeat bg-contain bg-center">
         <ul className=" absolute inset-0 flex items-center justify-between p-4 ">
           <Image
-            src={'/images/menu.png'}
+            src={'/images/Clock.png'}
             alt="menu"
             width={1000}
             height={1000}
-            className=" cursor-pointer w-10 lg:w-15 h-10 lg:h-15 "
+            className=" cursor-pointer w-10 lg:w-15 h-10 lg:h-15  "
           />
+
           <Image
             src={'/images/Logo.png'}
             alt="menu"
@@ -21,11 +22,11 @@ export default function Header() {
             className=" cursor-pointer w-10 lg:w-15 h-10 lg:h-15  "
           />
           <Image
-            src={'/images/Clock.png'}
+            src={'/images/menu.png'}
             alt="menu"
             width={1000}
             height={1000}
-            className=" cursor-pointer w-10 lg:w-15 h-10 lg:h-15  "
+            className=" cursor-pointer w-10 lg:w-15 h-10 lg:h-15 "
           />
         </ul>
       </div>
@@ -51,10 +52,7 @@ export default function Header() {
             </span>
           </div>
           {/* Progress Bar */}
-          <div
-            dir="ltr"
-            className="relative flex-1 h-3 bg-white rounded-2xl "
-          >
+          <div dir="ltr" className="relative flex-1 h-3 bg-white rounded-2xl ">
             {/* Progress fill */}
             <div className="h-full w-[60%] bg-[#FFE16A] rounded-[99px] border border-black shadow-[0_2px_0_0_#000] flex items-center justify-end pl-2">
               <span

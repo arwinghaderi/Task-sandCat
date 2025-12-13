@@ -10,7 +10,7 @@ export default function Home() {
       <div className="px-5 lg:px-60 mt-6">
         <SectionHeader />
       </div>
-      <div className="px-5 lg:px-60 mt-6">
+      <div className="px-2 lg:px-60 mt-6">
         <GameClient />
       </div>
     </div>
