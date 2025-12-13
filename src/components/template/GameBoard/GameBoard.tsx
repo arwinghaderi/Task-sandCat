@@ -93,8 +93,8 @@ export default function GameBoard({ zones }: { zones: Zone[] }) {
             style={{
               top: zone.top,
               left: zone.left,
-              width: 'clamp(40px, 15%, 92px)',
-              height: 'clamp(40px, 13%, 90px)',
+              width: 'clamp(40px, 15%, 150px)',
+              height: 'clamp(40px, 13%, 148px)',
             }}
           >
             {zone.item ? (
