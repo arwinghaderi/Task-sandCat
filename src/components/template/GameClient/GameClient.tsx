@@ -1,6 +1,14 @@
 'use client'
 import React, { useState } from 'react'
-import { DndContext, DragEndEvent, DragOverlay } from '@dnd-kit/core'
+import {
+  DndContext,
+  DragEndEvent,
+  DragOverlay,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
+} from '@dnd-kit/core'
 import GameBoard from '../../template/GameBoard/GameBoard'
 import OptionsPanel from '../../template/OptionsPanel/OptionsPanel'
 import SubmitButton from '../../modules/SubmitButton/SubmitButton'
@@ -147,8 +155,17 @@ export default function GameClient() {
     }
   }
 
+  const mouseSensor = useSensor(MouseSensor, {
+    activationConstraint: { distance: 5 },
+  })
+  const touchSensor = useSensor(TouchSensor, {
+    activationConstraint: { delay: 100, tolerance: 5 },
+  })
+  const sensors = useSensors(mouseSensor, touchSensor)
+
   return (
     <DndContext
+      sensors={sensors}
       onDragStart={(e) => {
         const activeId = e.active.id as string
 
@@ -189,11 +206,16 @@ export default function GameClient() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.25, type: 'spring', stiffness: 300 }}
-            className="w-28 h-16 bg-linear-to-br from-purple-600 via-pink-500 to-yellow-400
-             rounded-xl flex items-center justify-center  cursor-grabbing
-             shadow-2xl border border-white/30"
+            className="
+     w-12 h-10        
+    sm:w-24 sm:h-14  
+    md:w-28 md:h-16  
+    bg-linear-to-br from-purple-600 via-pink-500 to-yellow-400
+    rounded-xl flex items-center justify-center cursor-grabbing
+    shadow-2xl border border-white/30
+  "
           >
-            <span className="text-white text-base font-bold tracking-wide drop-shadow-lg">
+            <span className="text-white text-xs sm:text-base font-bold tracking-wide drop-shadow-lg">
               {activeItem.label}
             </span>
           </motion.div>

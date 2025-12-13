@@ -31,7 +31,7 @@ export default function Celebration({ allCorrect }: { allCorrect: boolean }) {
 
   return showConfetti ? (
     <Confetti
-      width={width - 40}
+      width={width - 10}
       height={height}
       numberOfPieces={5000}
       style={{ position: 'fixed', top: 0, left: 0 }}
