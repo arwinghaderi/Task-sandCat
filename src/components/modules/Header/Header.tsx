@@ -4,8 +4,8 @@ import React from 'react'
 export default function Header() {
   return (
     <>
-      <div className=" relative mx-auto   md:w-[600px]  h-[170px] rounded-3xl bg-[url('/images/Header-bg.png')] bg-no-repeat bg-contain bg-center">
-        <ul className=" absolute inset-0 flex items-center justify-between p-4 ">
+      <div className=" relative mx-auto   md:w-[600px]  h-40 rounded-3xl bg-[url('/images/Header-bg.png')] bg-no-repeat bg-contain bg-center">
+        <ul className=" absolute inset-0 flex items-center justify-between p-1 ">
           <Image
             src={'/images/Clock.png'}
             alt="menu"

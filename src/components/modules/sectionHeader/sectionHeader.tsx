@@ -8,7 +8,7 @@ export default function SectionHeader() {
           <span>۸</span>
         </div>
 
-        <span className=" text-black font-medium leading-6  text-sm sm:text-base ">
+        <span className=" text-black font-medium leading-6  text-sm sm:text-lg ">
           فرزندم، نام اجسام را درون مستطیل مربوطه قرار دهید.
         </span>
       </div>
