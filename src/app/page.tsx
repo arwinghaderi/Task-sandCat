@@ -1,4 +1,3 @@
-// این فایل سرور کامپوننت باقی می‌مونه
 import Header from '../components/modules/Header/Header'
 import SectionHeader from '../components/modules/sectionHeader/sectionHeader'
 import GameClient from '../components/template/GameClient/GameClient'

@@ -14,6 +14,7 @@ function useWindowSize() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+    
   return size
 }
 
@@ -29,13 +30,14 @@ export default function Celebration({ allCorrect }: { allCorrect: boolean }) {
     }
   }, [allCorrect])
 
-  return showConfetti ? (
-    <Confetti
-      width={width - 10}
-      height={height}
-      numberOfPieces={5000}
-      style={{ position: 'fixed', top: 0, left: 0 }}
-      recycle={false}
-    />
-  ) : null
+return showConfetti && width > 0 && height > 0 ? (
+  <Confetti
+    width={width - 10}
+    height={height}
+    numberOfPieces={5000}
+    style={{ position: 'fixed', top: 0, left: 0 }}
+    recycle={false}
+  />
+) : null
+
 }

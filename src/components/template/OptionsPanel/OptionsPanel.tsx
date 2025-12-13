@@ -47,7 +47,7 @@ export default function OptionsPanel({ options, allOptions }: Props) {
       {allOptions.map((opt) => (
         <div
           key={opt.id}
-          className="w-full h-15 md:h-24 bg-[#E2E6EA]  px-0.5  pt-0.5 pb-3  md:px-1 md:pt-3 md:pb-5 rounded-lg flex items-center justify-center"
+          className="w-full h-15 md:h-24 bg-[#E2E6EA]  px-0.5  pt-0.5  pb-2 sm:pb-3  md:px-1 md:pt-3 md:pb-5 rounded-lg flex items-center justify-center"
         >
           {options.find((o) => o.id === opt.id) && (
             <DraggableBox id={opt.id} label={opt.label} />

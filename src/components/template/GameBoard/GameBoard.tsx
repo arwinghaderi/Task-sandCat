@@ -89,12 +89,12 @@ export default function GameBoard({ zones }: { zones: Zone[] }) {
           <div
             key={zone.id}
             ref={setNodeRef}
-            className={`absolute shrink-0 pt-0.5 px-0.5 pb-2 text-center flex items-center justify-center rounded-xl transition duration-300 ${zoneClass}`}
+            className={`absolute shrink-0 pt-0.5 px-0.5 pb-1.5 md:pb-2 text-center flex items-center justify-center rounded-xl transition duration-300 ${zoneClass}`}
             style={{
               top: zone.top,
               left: zone.left,
-              width: 'clamp(35px, 15%, 92px)',
-              height: 'clamp(35px, 13%, 90px)',
+              width: 'clamp(40px, 15%, 92px)',
+              height: 'clamp(40px, 13%, 90px)',
             }}
           >
             {zone.item ? (

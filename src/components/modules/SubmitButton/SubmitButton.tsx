@@ -124,7 +124,7 @@ export default function SubmitButton({
       className={`flex flex-col gap-8 w-full 
         ${
           submitted
-            ? `${state.parentBg} ${state.parentBorder} border-4 rounded-3xl px-8 pb-8 pt-10`
+            ? `${state.parentBg} ${state.parentBorder} border-4 rounded-3xl    rounded-tl-3xl rounded-br-[28px]  rounded-bl-4xl  rounded-tr-[46px]   px-8 pb-8 pt-10`
             : ''
         }
       `}
